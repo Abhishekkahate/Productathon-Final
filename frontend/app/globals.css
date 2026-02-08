@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 15, 23, 42;
+  /* Slate 900 */
+  --background-start-rgb: 248, 250, 252;
+  /* Slate 50 */
+  --background-end-rgb: 241, 245, 249;
+  /* Slate 100 */
+  --hp-blue: #0047BB;
+  --hp-red: #ED1C24;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #f8fafc;
+  /* Clean Slate 50 background */
+  font-family: 'Outfit', sans-serif;
+  /* Keep font but ensure it's clean */
+}
+
+/* Corporate Card - Clean, White, Shadow-sm */
+.corporate-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  /* Slate 200 */
+  border-radius: 12px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease-in-out;
+}
+
+.corporate-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-color: #cbd5e1;
+  /* Slate 300 */
+}
+
+/* Corporate Header Background */
+.corporate-header {
+  background: linear-gradient(to right, #0047BB, #003388);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 71, 187, 0.2);
+}
+
+/* Status Badges */
+.badge-success {
+  background-color: #ecfdf5;
+  /* Emerald 50 */
+  color: #047857;
+  /* Emerald 700 */
+  border: 1px solid #d1fae5;
+}
+
+.badge-warning {
+  background-color: #fffbeb;
+  /* Amber 50 */
+  color: #b45309;
+  /* Amber 700 */
+  border: 1px solid #fef3c7;
+}
+
+.badge-neutral {
+  background-color: #f1f5f9;
+  /* Slate 100 */
+  color: #475569;
+  /* Slate 600 */
+  border: 1px solid #e2e8f0;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animations - Subtle Fade */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
+}
+
+/* Safe Area for Mobile */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
